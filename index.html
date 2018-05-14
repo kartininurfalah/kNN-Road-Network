@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>KNN</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="./styles/main.css" />
+</head>
+
+<body>
+  <h4>KNN Road Network</h4>
+  <div id="content">
+    <div class="row">
+      <div class="input-field col s3">
+        <select onchange="loadQueryPoints(this)" id="location">
+          <option value="" disabled selected>Pilih Lokasi</option>
+          <option value="bakmi">Warung Bakmi</option>
+          <option value="padang">Rumah Makan Padang</option>
+        </select>
+        <label>Pilihan Lokasi</label>
+      </div>
+
+      <div class="input-field col s6" class="i2">
+        <select id="queryPoints">
+          <option value="" disabled selected>Pilih Query Points</option>
+
+        </select>
+        <label>Query Points</label>
+      </div>
+
+      <div class="input-field col s3">
+        <input id="nilaiK" type="text" class="validate">
+        <label for="nilaiK">Masukkan nilai K</label>
+      </div>
+    </div>
+
+
+  </div>
+  <button class="waves-effect waves-light btn blue" onclick="generateQueryPoints()">GENERATE</button>
+
+  <div id="map"></div>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+  <script src="./services/knn.js"></script>
+  <script src="./services/styles.js"></script>
+  <script src="./services/loadMap.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALfWvVw3rZspKgRhd11AH0JFU3FD8Lt0Q">
+  </script>
+  <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+</body>
+
+</html>
