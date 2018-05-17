@@ -366,5 +366,5 @@ $(window).on('load', function() {
 
 
 // Styles
-$('.dropdown-trigger').dropdown();
+// $('.dropdown-trigger').dropdown();
 },{"../RESULT/BakmiBandung.json":1,"../RESULT/RumahMakanPadang.json":2}]},{},[3]);
